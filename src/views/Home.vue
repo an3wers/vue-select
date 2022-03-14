@@ -1,8 +1,9 @@
 <template>
   <div id="home">
     <app-select
-      :placeholder="placeholder"
-      :url="URL_DATA"
+      placeholder="Choose options..."
+      :data="users"
+      param="name"
     ></app-select>
   </div>
 </template>
@@ -14,13 +15,12 @@ import { ref, reactive, computed } from 'vue'
 export default {
   setup() {
 
-    const URL_DATA = 'https://jsonplaceholder.typicode.com/users'
+    const users = 'https://jsonplaceholder.typicode.com/users'
 
     const placeholder = 'Open this select menu'
     
     return {
-      placeholder,
-      URL_DATA
+      users
     }
   },
 
