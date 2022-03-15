@@ -68,14 +68,14 @@
 </template>
 
 <script>
-import { onMounted, computed, watch, reactive, ref } from 'vue'
-import { useFetch } from '@/fetch'
+import { computed, ref } from 'vue'
+import { useFetch } from '@/useSelect/fetch'
 
 export default {
   props: ['data', 'placeholder', 'param'],
 
-  setup({ data, param, placeholder }, { emit }) {
-    const options = ref([])
+  setup({ data, param }) {
+        const options = ref([])
     let selValue = ref(null)
     let currentElementId = ref(null)
     let currentElement = ref(null)

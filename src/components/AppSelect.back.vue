@@ -69,7 +69,7 @@
 
 <script>
 import { onMounted, computed, watch, reactive, ref } from 'vue'
-import { useFetch } from '@/fetch'
+import { useFetch } from '@/useSelect/fetch'
 
 export default {
   props: {
