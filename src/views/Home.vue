@@ -1,9 +1,15 @@
 <template>
   <div id="home">
     <app-select
-      placeholder="Choose options..."
+      placeholder="Выбрать пользователя..."
       :data="users"
       param="name"
+    ></app-select>
+    <br>
+    <app-select
+      placeholder="Выбрать email..."
+      :data="users"
+      param="email"
     ></app-select>
   </div>
 </template>
@@ -17,7 +23,6 @@ export default {
 
     const users = 'https://jsonplaceholder.typicode.com/users'
 
-    const placeholder = 'Open this select menu'
     
     return {
       users
